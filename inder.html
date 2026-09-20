@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BENIFER SECURIX | Cybersecurity Solutions</title>
+
+<meta name="description" content="BENIFER SECURIX provides practical cybersecurity assessment, vulnerability testing and security solutions.">
+
+<link rel="icon" href="assets/logo.png">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#020b18;
+    color:#eaf4ff;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:90%;
+    max-width:1180px;
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(2,11,24,.94);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(0,170,255,.15);
+}
+
+.navbar{
+    height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo-box{
+    width:175px;
+    height:55px;
+    display:flex;
+    align-items:center;
+}
+
+.logo-box img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+}
+
+.nav-links a{
+    font-size:13px;
+    color:#dce9f7;
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:#00b7ff;
+}
+
+.nav-links a.active{
+    border-bottom:2px solid #00b7ff;
+    padding-bottom:7px;
+}
+
+.nav-btn{
+    border:1px solid #008dca;
+    border-radius:25px;
+    padding:10px 20px;
+    color:#00b7ff !important;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:425px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid rgba(0,170,255,.12);
+
+    background:
+        radial-gradient(circle at 80% 50%,rgba(0,150,255,.20),transparent 25%),
+        radial-gradient(circle at 70% 80%,rgba(0,100,255,.13),transparent 35%),
+        linear-gradient(110deg,#020a16,#031225 55%,#020914);
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    width:550px;
+    height:550px;
+    right:-100px;
+    top:-80px;
+    border-radius:50%;
+    border:1px solid rgba(0,174,255,.13);
+    box-shadow:
+        0 0 80px rgba(0,150,255,.10),
+        inset 0 0 80px rgba(0,150,255,.06);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    width:55%;
+    padding:55px 0;
+}
+
+.hero-badge{
+    display:inline-block;
+    border:1px solid #006da8;
+    color:#54cfff;
+    border-radius:20px;
+    padding:7px 16px;
+    font-size:11px;
+    letter-spacing:1px;
+    margin-bottom:18px;
+    background:rgba(0,110,180,.08);
+}
+
+.hero-logo{
+    width:390px;
+    max-width:100%;
+    height:105px;
+    object-fit:contain;
+    object-position:left center;
+    display:block;
+    margin-bottom:5px;
+}
+
+.hero h1{
+    font-size:31px;
+    line-height:1.2;
+    margin-bottom:12px;
+}
+
+.hero h1 span{
+    color:#00aaff;
+}
+
+.hero p{
+    max-width:560px;
+    color:#a9bfd3;
+    font-size:14px;
+    margin-bottom:24px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:12px 20px;
+    border-radius:9px;
+    font-size:13px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:linear-gradient(90deg,#00aeea,#008bd1);
+    color:#00111e;
+}
+
+.btn-secondary{
+    border:1px solid #0087c9;
+    color:#bdeaff;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* cyber globe */
+
+.cyber-visual{
+    position:absolute;
+    right:5%;
+    width:420px;
+    height:360px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.globe{
+    width:285px;
+    height:285px;
+    border-radius:50%;
+    border:1px solid rgba(0,174,255,.35);
+    box-shadow:
+        0 0 50px rgba(0,157,255,.16),
+        inset 0 0 50px rgba(0,157,255,.08);
+    position:relative;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 28px,
+            rgba(0,170,255,.10) 29px,
+            transparent 30px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 28px,
+            rgba(0,170,255,.08) 29px,
+            transparent 30px
+        );
+}
+
+.globe:before,
+.globe:after{
+    content:"";
+    position:absolute;
+    inset:15px;
+    border:1px solid rgba(0,174,255,.22);
+    border-radius:50%;
+}
+
+.globe:after{
+    inset:45px;
+}
+
+.shield-center{
+    position:absolute;
+    z-index:3;
+    width:120px;
+    height:120px;
+    border:4px solid #009eff;
+    clip-path:polygon(50% 0,92% 18%,88% 70%,50% 100%,12% 70%,8% 18%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#00b7ff;
+    font-size:48px;
+    font-weight:900;
+    text-shadow:0 0 20px #008cff;
+    background:rgba(0,60,120,.18);
+    box-shadow:0 0 35px rgba(0,157,255,.45);
+}
+
+.cyber-ring{
+    position:absolute;
+    bottom:15px;
+    width:350px;
+    height:55px;
+    border:2px solid rgba(0,174,255,.45);
+    border-radius:50%;
+    box-shadow:0 0 35px rgba(0,174,255,.22);
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:55px 0;
+    border-bottom:1px solid rgba(0,170,255,.10);
+}
+
+.section-label{
+    color:#00aaff;
+    font-size:10px;
+    font-weight:bold;
+    letter-spacing:1px;
+    margin-bottom:3px;
+}
+
+.section-title{
+    font-size:22px;
+    margin-bottom:4px;
+}
+
+.section-subtitle{
+    color:#9db5c9;
+    font-size:12px;
+    margin-bottom:25px;
+}
+
+/* ================= SERVICES ================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.service-card{
+    min-height:180px;
+    padding:18px;
+    border:1px solid #075180;
+    border-radius:8px;
+    background:linear-gradient(
+        145deg,
+        rgba(0,67,110,.18),
+        rgba(1,15,30,.65)
+    );
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+    border-color:#00aaff;
+    box-shadow:0 10px 30px rgba(0,140,255,.10);
+}
+
+.icon{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:rgba(0,160,255,.13);
+    border:1px solid rgba(0,170,255,.30);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#00b7ff;
+    font-size:18px;
+    margin-bottom:13px;
+}
+
+.service-card h3{
+    font-size:14px;
+    margin-bottom:7px;
+}
+
+.service-card p{
+    font-size:11px;
+    color:#a7bdd0;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about-text p{
+    color:#a7bdd0;
+    font-size:12px;
+    margin-top:12px;
+}
+
+.vision{
+    border:1px solid #075180;
+    border-left:3px solid #00aaff;
+    border-radius:8px;
+    padding:25px;
+    background:linear-gradient(
+        145deg,
+        rgba(0,75,120,.18),
+        rgba(0,15,30,.6)
+    );
+}
+
+.vision h3{
+    color:#00b7ff;
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.vision p{
+    color:#a7bdd0;
+    font-size:12px;
+}
+
+/* ================= PROCESS ================= */
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+}
+
+.process-step{
+    position:relative;
+    padding:15px 5px;
+    text-align:left;
+}
+
+.step-number{
+    width:42px;
+    height:42px;
+    border:2px solid #005f9b;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#00aaff;
+    font-weight:bold;
+    margin-bottom:9px;
+    box-shadow:0 0 15px rgba(0,160,255,.10);
+}
+
+.process-step h4{
+    font-size:12px;
+    margin-bottom:3px;
+}
+
+.process-step p{
+    color:#8099ae;
+    font-size:9px;
+}
+
+.process-step:not(:last-child):after{
+    content:"›";
+    position:absolute;
+    right:-5px;
+    top:22px;
+    color:#008fd1;
+    font-size:25px;
+}
+
+/* ================= FOUNDER / CONTACT ================= */
+
+.founder-contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.founder-name{
+    font-size:20px;
+    margin-bottom:2px;
+}
+
+.founder-role{
+    color:#00aaff;
+    font-size:11px;
+    margin-bottom:12px;
+}
+
+.founder-text{
+    color:#91aabe;
+    font-size:11px;
+    max-width:400px;
+}
+
+.signature{
+    width:150px;
+    height:65px;
+    object-fit:contain;
+    margin-top:10px;
+}
+
+.contact-box h2{
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.contact-box p{
+    color:#91aabe;
+    font-size:11px;
+    margin-bottom:14px;
+}
+
+.contact-info{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:18px;
+}
+
+.contact-info a{
+    color:#b7d5e9;
+    font-size:11px;
+}
+
+.contact-btn{
+    display:inline-block;
+    background:#00aeea;
+    color:#00111e;
+    padding:11px 17px;
+    border-radius:8px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:20px 0;
+    background:#010813;
+}
+
+.footer-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.footer-logo{
+    width:130px;
+    height:45px;
+    object-fit:contain;
+}
+
+.footer-copy{
+    color:#71899d;
+    font-size:9px;
+}
+
+.footer-tag{
+    color:#00aaff;
+    font-size:10px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .navbar{
+        justify-content:center;
+    }
+
+    .hero{
+        min-height:auto;
+    }
+
+    .hero-content{
+        width:100%;
+        text-align:center;
+        padding:45px 0 30px;
+    }
+
+    .hero-logo{
+        margin:0 auto 8px;
+        width:310px;
+        height:85px;
+        object-position:center;
+    }
+
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .cyber-visual{
+        position:relative;
+        right:auto;
+        width:100%;
+        height:260px;
+        margin-top:-5px;
+    }
+
+    .globe{
+        width:220px;
+        height:220px;
+    }
+
+    .cyber-ring{
+        width:280px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about-grid,
+    .founder-contact{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .process{
+        grid-template-columns:1fr;
+    }
+
+    .process-step{
+        display:flex;
+        align-items:center;
+        gap:12px;
+    }
+
+    .step-number{
+        flex-shrink:0;
+        margin:0;
+    }
+
+    .process-step:not(:last-child):after{
+        display:none;
+    }
+
+    .footer-content{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+@media(max-width:550px){
+
+    .logo-box{
+        width:155px;
+        height:50px;
+    }
+
+    .hero h1{
+        font-size:25px;
+    }
+
+    .hero-logo{
+        width:280px;
+        height:80px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .container{
+        width:88%;
+    }
+
+    section{
+        padding:45px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container navbar">
+
+        <a href="#home" class="logo-box">
+            <img src="assets/logo.png" alt="BENIFER SECURIX Logo">
+        </a>
+
+        <nav class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#process">Process</a>
+            <a href="#founder">Founder</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="nav-btn">↗ Get In Touch</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                CYBERSECURITY &nbsp;•&nbsp; DIGITAL DEFENSE &nbsp;•&nbsp; SECURITY SOLUTIONS
+            </div>
+
+            <img
+                src="assets/logo.png"
+                alt="BENIFER SECURIX"
+                class="hero-logo"
+            >
+
+            <h1>
+                Secure Today. <span>Stay Ahead.</span>
+            </h1>
+
+            <p>
+                Practical cybersecurity assessment, vulnerability testing and
+                security solutions designed to help businesses identify
+                weaknesses and strengthen their digital security.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    🛡 Request Security Assessment
+                </a>
+
+                <a href="#services" class="btn btn-secondary">
+                    Explore Services →
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cyber-visual">
+            <div class="globe"></div>
+            <div class="shield-center">B</div>
+            <div class="cyber-ring"></div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-label">OUR SERVICES</div>
+
+        <h2 class="section-title">
+            Cybersecurity Services
+        </h2>
+
+        <p class="section-subtitle">
+            Practical security services for businesses and organizations.
+        </p>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="icon">🛡</div>
+                <h3>Website Security Assessment</h3>
+                <p>
+                    Authorized assessment of websites and web applications
+                    to identify common security weaknesses and configuration issues.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">◎</div>
+                <h3>Network Security Assessment</h3>
+                <p>
+                    Authorized network discovery, service review and basic
+                    security assessment within a defined scope.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">⌕</div>
+                <h3>Vulnerability Assessment</h3>
+                <p>
+                    Identification and documentation of security vulnerabilities
+                    with practical remediation guidance.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">▤</div>
+                <h3>Security Reporting</h3>
+                <p>
+                    Professional reports containing scope, findings, evidence,
+                    impact and recommended corrective actions.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-text">
+
+            <div class="section-label">ABOUT US</div>
+
+            <h2 class="section-title">
+                About BENIFER SECURIX
+            </h2>
+
+            <p>
+                BENIFER SECURIX is a cybersecurity-focused startup dedicated
+                to helping businesses understand and strengthen their digital security.
+            </p>
+
+            <p>
+                We focus on practical security assessment, vulnerability
+                identification, authorized security testing and clear reporting.
+            </p>
+
+        </div>
+
+        <div class="vision">
+
+            <h3>◉ &nbsp; Our Vision</h3>
+
+            <p>
+                To make practical cybersecurity more accessible to growing
+                businesses through ethical testing, clear communication and
+                actionable security guidance.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROCESS -->
+<section id="process">
+
+    <div class="container">
+
+        <div class="section-label">OUR PROCESS</div>
+
+        <h2 class="section-title">
+            Our Security Process
+        </h2>
+
+        <p class="section-subtitle">
+            Every assessment begins with authorization and a clearly defined scope.
+        </p>
+
+        <div class="process">
+
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <div>
+                    <h4>Scope</h4>
+                    <p>Define targets, systems and boundaries.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <div>
+                    <h4>Authorize</h4>
+                    <p>Confirm written testing permission.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <div>
+                    <h4>Assess</h4>
+                    <p>Perform authorized security testing.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <div>
+                    <h4>Report</h4>
+                    <p>Document findings and recommendations.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">05</div>
+                <div>
+                    <h4>Retest</h4>
+                    <p>Verify remediation when requested.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOUNDER + CONTACT -->
+<section id="founder">
+
+    <div class="container founder-contact">
+
+        <div>
+
+            <div class="section-label">FOUNDER</div>
+
+            <h2 class="founder-name">
+                Benifer V
+            </h2>
+
+            <div class="founder-role">
+                Founder — BENIFER SECURIX
+            </div>
+
+            <p class="founder-text">
+                Founder of BENIFER SECURIX, focused on cybersecurity
+                assessment, security testing and practical defense solutions.
+            </p>
+
+            <img
+                src="assets/signature.png"
+                alt="Benifer Signature"
+                class="signature"
+            >
+
+        </div>
+
+
+        <div class="contact-box" id="contact">
+
+            <div class="section-label">GET IN TOUCH</div>
+
+            <h2>Let's Secure Your Business</h2>
+
+            <p>
+                Tell us what you need assessed and we will discuss the scope
+                and next steps.
+            </p>
+
+            <div class="contact-info">
+
+                <a href="mailto:benifersecurix@gmail.com">
+                    ✉ benifersecurix@gmail.com
+                </a>
+
+                <a href="tel:+918754314855">
+                    ☎ +91 87543 14855
+                </a>
+
+            </div>
+
+            <a
+                href="mailto:benifersecurix@gmail.com"
+                class="contact-btn"
+            >
+                Contact BENIFER SECURIX →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="container footer-content">
+
+        <img
+            src="assets/logo.png"
+            alt="BENIFER SECURIX"
+            class="footer-logo"
+        >
+
+        <div class="footer-copy">
+            © 2026 BENIFER SECURIX. All Rights Reserved.
+        </div>
+
+        <div class="footer-tag">
+            Secure Today. Stronger Tomorrow.
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
